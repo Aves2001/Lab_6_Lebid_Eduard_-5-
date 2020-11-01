@@ -22,7 +22,7 @@ int main(void) {
 
 bool Even(int k)
 {
-	if (k%2 == 0)
+	if (k%2 == 0) // якщо число парне
 	{
 		return true; // true - це то саме шо "1"
 	} else return false; // false - це то саме шо "0"
@@ -47,14 +47,20 @@ void printf_massiv(int a[], int size, int k)
 		if (Even(a[i])) // Якщо функція Even повернула true, виводить число червоним кольором.
 		{
 			printf("\r\na[%d] = ", i);
-			SetColor_RED(1, a[i]);
+			SetColor(14,0); // жовтий текст
+			printf("%d", a[i]);
+			SetColor(10,0); // зелений текст
 			k++;
 		}else printf("\r\na[%d] = %d", i , a[i]); // Інакше виводить число стандартним кольором
 	}	
 		if (k > 0) // перевіряє чи в масиві взагалі були парні числа чи ні.
 		{
 			printf("\r\n\nКількість парних чисел серед елементів масиву: ");
-			SetColor_RED(1, k, 0, 1); // виводить кількість червоним кольором.
+			
+			SetColor(14,0); // жовтий текст
+			printf("%d\r\n", k);
+			SetColor(10,0); // зелений текст
+
 		} else printf("\r\n\nПарних чисел серед елементів масиву немає\n");
 		
 }

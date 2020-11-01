@@ -6,7 +6,7 @@
 int Low = -100, High = 100; // діапазон в якому генеруються випадкові числа
 
 void scan_massiv(int a[], int size); // заповнення масива за допомогою rand() в діапазоні (Low, High)
-void printf_massiv(int a[], int size); // виводить введений масив на екран
+void printf_massiv(int a[], int size); // виводить згенерований масив на екран
 void dobutock(int a[], int size, long long int resut_dobutock = 1); // обчислює добуток всіх чисел масиву відмінних від нуля
 void summ_abs(int a[], int size); // обчислює суму модулів елементів масиву розташованих після першого відємного числа, та виводить результат на екран
 
@@ -30,7 +30,7 @@ int main(void) {
 
 void scan_massiv(int a[], int size)
 {
-	srand(time(0)); // для генерація нових чисел кожного разу при запуску програми
+	srand(time(0)); // для генерації нових чисел кожного разу при запуску програми
 	
 	for (int i = 0; i < size; i++)
 	{
@@ -66,9 +66,9 @@ void dobutock(int a[], int size, long long int resut_dobutock)
 			else 
 			{
 				printf("\r\n 1) добуток ненульових елементів масиву: ");
-				SetColor(14,0);
+				SetColor(14,0); // жовтий текст
 				printf("%lld \n", resut_dobutock);
-				SetColor(10,0);
+				SetColor(10,0); // зелений текст
 				return;
 			}
 }

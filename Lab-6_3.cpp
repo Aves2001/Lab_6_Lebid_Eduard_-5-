@@ -46,7 +46,7 @@ void printf_massiv(int a[], int size)
 	{
 		if (a[i] == max && max_i != -1) // якщо це максимальне число - виділяє його червоним кольором
 		{
-			SetColor(12,0);
+			SetColor(14,0);
 			printf("\r\na[%d] = %d", i , a[i]);
 			SetColor(10,0);
 		} else printf("\r\na[%d] = %d", i , a[i]); // інакше просто виводить рядок масива на екран
@@ -84,11 +84,15 @@ void printf_result()
 		else if (max_k == 1)
 		{
 			printf("\r\n\nНайбільший непарний елемент одновимірного масиву: a[%d] = ", max_i);
-			SetColor_RED(1, max, 0, 1);
+			SetColor(14,0);
+			printf("%d\r\n", max);
+			SetColor(10,0);
 		}
 			else
 			{
 				printf("\r\n\nЗнайдено найбільших непарних елементів одновимірного масиву: %d, із значенням: ", max_k);
-				SetColor_RED(1, max, 0, 1);
+				SetColor(14,0);
+				printf("%d\r\n", max);
+				SetColor(10,0);
 			}
 }

@@ -10,7 +10,7 @@ void SetColor(int text, int background)
    SetConsoleTextAttribute(hStdOut, (WORD)((background << 4) | text));
 }
 
-void SetColor_RED(bool k = 1, int a = 0, char b[] = "0", int n = 0)
+void SetColor_RED(bool k = 1, int a = 0, const char b[] = "0", int n = 0)
 {
 	SetColor(12,0); // червоний колір
 

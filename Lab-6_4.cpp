@@ -3,20 +3,20 @@
 #include "check_int.h"
 #include <time.h>
 
-#define _N 3 // Кількість рядків
-#define _M 4 // Кількість стовпців
+#define _N 3 // Кількість рядків масива "а"
+#define _M 4 // Кількість стовпчиків масива "а"
 
 const int n = _N, m = _M;
 int Low = -100, High = 100;
 
-void scan_massiv(int n, int m, int a[][_M]);
-void printf_massiv(int n, int m, int a[][_M]);
-void sort_massiv(int n, int m, int a[][_M]);
+void scan_massiv(int n, int m, int a[][_M]); // заповнення масива за допомогою rand() в діапазоні (Low, High)
+void printf_massiv(int n, int m, int a[][_M]);  // виводить згенерований масив на екран
+void sort_massiv(int n, int m, int a[][_M]); // кожен рядок по зростанню значень елементiв.
 
 int main(void) {
 	start_cfg();
 	
-	int a[n][m];
+	int a[n][m]; // масив "а"
 
 	scan_massiv(_N, _M, a);
 
@@ -36,11 +36,11 @@ int main(void) {
 
 void scan_massiv(int n, int m, int a[][_M])
 {
-	srand(time(0));
+	srand(time(0)); // для генерація нових чисел кожного разу при запуску програми
 	for (int i = 0; i < n; i++)
 	for (int j = 0; j < m; j++)
 	{
-		a[i][j] = Low+rand()%(High - Low + 1);
+		a[i][j] = Low+rand()%(High - Low + 1); // заповнення масива випадковими числами в діапазоні від Low до High
 	}printf("\r\n");
 }
 

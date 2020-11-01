@@ -2,7 +2,7 @@
 
 // char debug = 1;
 
-int scanf_check_int (char printf_x[], char bil_0 = 0, char lvl = 0, int massiv_i = 0, int massiv_j = 0)
+int scanf_check_int (const char printf_x[], char bil_0 = 0, char lvl = 0, int massiv_i = 0, int massiv_j = 0)
 {
 #define _SIZES_N 13
 
