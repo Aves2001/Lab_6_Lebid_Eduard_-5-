@@ -58,7 +58,7 @@ void dobutock(int a[], int size, long long int resut_dobutock)
 			resut_dobutock *= a[i]; // тоді домножити його до resut_dobutock, першого разу виконується множення на одиницю
 		}
 	}
-		if (resut_dobutock == 0)
+		if (resut_dobutock == 0) // така собі перевірка, але вроді працює
 		{
 			SetColor_RED(0, 0, "\r\n 1) Щось пішло не так, програма споробувала порахувати добуток, \n    але трішки не витримала");
 			return;

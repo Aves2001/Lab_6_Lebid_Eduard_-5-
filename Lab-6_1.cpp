@@ -10,7 +10,7 @@ int main(void) {
 	start_cfg();
 
 	int size = 10; // розмір масива
-	int	a[size]; // масив "а"
+	int a[size]; // масив "а"
 
 	scan_massiv(a, size);
 	printf_massiv(a, size);
@@ -44,14 +44,14 @@ void printf_massiv(int a[], int size, int k)
 
 	for (int i = 0; i < size; i++)
 	{
-		if (Even(a[i])) // Якщо функція Even повернула true, виводить число червоним кольором.
+		if (Even(a[i])) // Якщо функція Even повернула true, виводить число жовтим кольором.
 		{
 			printf("\r\na[%d] = ", i);
 			SetColor(14,0); // жовтий текст
 			printf("%d", a[i]);
 			SetColor(10,0); // зелений текст
-			k++;
-		}else printf("\r\na[%d] = %d", i , a[i]); // Інакше виводить число стандартним кольором
+			k++; // Кількість парних чисел
+		}else printf("\r\na[%d] = %d", i , a[i]); // Інакше виводить число зеленим кольором
 	}	
 		if (k > 0) // перевіряє чи в масиві взагалі були парні числа чи ні.
 		{
@@ -62,5 +62,4 @@ void printf_massiv(int a[], int size, int k)
 			SetColor(10,0); // зелений текст
 
 		} else printf("\r\n\nПарних чисел серед елементів масиву немає\n");
-		
 }

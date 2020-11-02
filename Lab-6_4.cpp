@@ -10,7 +10,7 @@ int Low = -100, High = 100;
 
 void scan_massiv(int n, int m, int a[][_M]); // заповнення масива за допомогою rand() в діапазоні (Low, High)
 void printf_massiv(int n, int m, int a[][_M]);  // виводить згенерований масив на екран
-void sort_massiv(int n, int m, int a[][_M]); // кожен рядок по зростанню значень елементiв.
+void sort_massiv(int n, int m, int a[][_M]); // сортує кожен рядок по зростанню значень елементiв.
 
 int main(void) {
 	start_cfg();
