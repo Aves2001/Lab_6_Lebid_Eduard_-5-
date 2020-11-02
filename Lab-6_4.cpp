@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "default_cfg.h"
-#include "check_int.h"
 #include <time.h>
 
 #define _N 3 // Кількість рядків масива "а"
